@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useRouter } from 'next/router'
-
+// import {qs} from 'qs'
 function Events({initEvents}) {
 
     const [events, setEvents] = useState(initEvents);
@@ -28,6 +28,7 @@ function Events({initEvents}) {
 
 export async function getServerSideProps(context){
     const {query} = context;
+    // TODO: might use qs module
     let queryString = Object.keys(query).length !== 0 ? Object.keys(query).map(key => key + '=' + query[key]).join('&') : "";
     if(queryString) queryString = "?" + queryString;
     const response = await fetch(`http://localhost:3000/events${queryString}`)

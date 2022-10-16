@@ -1,0 +1,31 @@
+
+body{
+    min-height: 100vh;
+    position: relative;
+}
+.header {
+    background-color: #264653;
+    color: #f4a261;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer {
+    background-color: #264653;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #e9c46a;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
